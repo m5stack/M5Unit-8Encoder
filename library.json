@@ -1,0 +1,16 @@
+{
+  "name": "M5UNIT_8Encoder",
+  "description": "Library for M5Stack Unit-8Encoder",
+  "keywords": "M5Stack Unit-8Encoder",
+  "authors": {
+    "name": "M5Stack",
+    "url": "http://www.m5stack.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/m5stack/M5Unit-8Encoder.git"
+  },
+  "version": "0.0.1",
+  "frameworks": "arduino",
+  "platforms": "espressif32"
+}
