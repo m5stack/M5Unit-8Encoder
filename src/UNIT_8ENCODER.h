@@ -27,7 +27,7 @@ class UNIT_8ENCODER {
    public:
     bool begin(TwoWire* wire = &Wire, uint8_t addr = ENCODER_ADDR,
                uint8_t sda = 21, uint8_t scl = 22, uint32_t speed = 100000L);
-    uint32_t getEncoderValue(uint8_t index);
+    int32_t getEncoderValue(uint8_t index);
     void setEncoderValue(uint8_t index, int32_t value);
     int32_t getIncrementValue(uint8_t index);
     bool getButtonStatus(uint8_t index);
