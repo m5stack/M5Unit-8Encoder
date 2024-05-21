@@ -60,11 +60,11 @@ void UNIT_8ENCODER::setEncoderValue(uint8_t index, int32_t value) {
     writeBytes(_addr, reg, data, 4);
 }
 
-uint32_t UNIT_8ENCODER::getIncrementValue(uint8_t index) {
+int32_t UNIT_8ENCODER::getIncrementValue(uint8_t index) {
     uint8_t data[4];
     uint8_t reg = index * 4 + INCREMENT_REG;
     readBytes(_addr, reg, data, 4);
-    uint32_t value =
+    int32_t value =
         data[0] | (data[1] << 8) | (data[2] << 16) | (data[3] << 24);
     return value;
 }

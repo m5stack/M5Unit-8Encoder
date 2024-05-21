@@ -29,7 +29,7 @@ class UNIT_8ENCODER {
                uint8_t sda = 21, uint8_t scl = 22, uint32_t speed = 100000L);
     uint32_t getEncoderValue(uint8_t index);
     void setEncoderValue(uint8_t index, int32_t value);
-    uint32_t getIncrementValue(uint8_t index);
+    int32_t getIncrementValue(uint8_t index);
     bool getButtonStatus(uint8_t index);
     bool getSwitchStatus(void);
     void setLEDColor(uint8_t index, uint32_t color);
