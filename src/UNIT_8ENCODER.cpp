@@ -40,6 +40,38 @@ bool UNIT_8ENCODER::begin(TwoWire *wire, uint8_t addr, uint8_t sda, uint8_t scl,
     }
 }
 
+bool UNIT_8ENCODER::begin(uint8_t addr, uint8_t sda, uint8_t scl,
+                          uint32_t speed) {
+    _wire  = &Wire;
+    _addr  = addr;
+    _sda   = sda;
+    _scl   = scl;
+    _speed = speed;
+    _wire->begin(sda, scl, speed);
+    delay(10);
+    _wire->beginTransmission(_addr);
+    uint8_t error = _wire->endTransmission();
+    if (error == 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+bool UNIT_8ENCODER::begin(uint8_t addr) {
+    _wire = &Wire;
+    _addr = addr;
+    _wire->begin();
+    delay(10);
+    _wire->beginTransmission(_addr);
+    uint8_t error = _wire->endTransmission();
+    if (error == 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 int32_t UNIT_8ENCODER::getEncoderValue(uint8_t index) {
     uint8_t data[4];
     uint8_t reg = index * 4 + ENCODER_REG;
