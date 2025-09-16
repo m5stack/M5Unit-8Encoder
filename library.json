@@ -1,6 +1,6 @@
 {
-  "name": "M5UNIT_8Encoder",
-  "description": "Library for M5Stack Unit-8Encoder",
+  "name": "M5Unit-8Encoder",
+  "description": "Library for M5Stack M5Unit-8Encoder",
   "keywords": "M5Stack Unit-8Encoder",
   "authors": {
     "name": "M5Stack",
